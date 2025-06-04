@@ -2,4 +2,4 @@ Hi there, this is a brief proyect thet me and some partners did in our experienc
 It is based on python and developed using a library named PIL. This code offers some basic and funny interactions with images.
 You can upload both an image's url or files from your computer (urls are having a rough time in this implementation :) ).
 
-The main file is carlos.py, its just carlos :D
+The main file is carlos.py, its just carlos :D (psst, dont choose option 33)
