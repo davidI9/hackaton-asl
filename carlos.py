@@ -1,12 +1,13 @@
 from PIL import Image, ImageFilter, ImageDraw
-import requests
+import requests, io
 
 opt = int(input("Introduce si quieres url (1) o archivo local (2):\n"))
 
 if opt == 1:
     archivo = input("Introduzca la url:\n")
-    imagen = Image.open(requests.get(archivo, stream=True).raw)
-if opt == 2:
+    response = requests.get(archivo, stream=True)
+    imagen = Image.open(io.BytesIO(response.content))
+elif opt == 2:
     archivo = input("Introduce la ruta del archivo:\n")
     imagen = Image.open(archivo)
 
